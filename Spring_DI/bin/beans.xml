@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="http://www.springframework.org/schema/beans
-		 http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
 
 	<bean id="accountDao" class="com.dao.AccountInMemoryImpl">
 	</bean>
 
- 	<!-- Set properties using Constructor injection -->
+	<!-- Set properties using Constructor injection -->
 	<bean id="satishAcc" class="com.entity.Account">
-       <constructor-arg index="0" value="SB500" />
-	   <constructor-arg index="1" value="Satish Prasad" /> 
-       <constructor-arg index="2" value="8590.50" /> 
-     </bean>
-     
-    <!-- Set properties using setter injection -->
-     <bean id="dhoniAcc" class="com.entity.Account">
-      	<property name="accountNumber" value="SB922" />
-	  	<property name="accountOwner" value="Dhoni" />
+		<constructor-arg index="0" value="SB500" />
+		<constructor-arg index="1" value="Satish Prasad" />
+		<constructor-arg index="2" value="8590.50" />
+	</bean>
+
+	<!-- Set properties using setter injection -->
+	<bean id="dhoniAcc" class="com.entity.Account">
+		<property name="accountNumber" value="SB922" />
+		<property name="accountOwner" value="Dhoni" />
 		<property name="balance" value="3455.55" />
-     </bean>
-     
+	</bean>
+
 </beans>
