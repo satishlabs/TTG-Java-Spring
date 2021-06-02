@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.satishlabs.entity">
+<class name="Account">
+		<id name="accountNumber" type="string" unsaved-value="null">
+				<generator class="assigned"/>
+		</id>
+	 	<property name="accountOwner" length="30" />
+		<property name="balance" precision="2" />
+</class>
+</hibernate-mapping>
